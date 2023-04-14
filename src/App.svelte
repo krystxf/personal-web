@@ -1,36 +1,35 @@
 <script lang="ts">
   import { ExperienceSimplified } from "./components/Experience";
-  import Footer from "./components/Footer";
-  import Navbar from "./components/Navbar";
-  import { SocialsFlex, SocialsList } from "./components/Socials";
+  import Layout from "./components/Layout/Layout.svelte";
+  import { SocialsFlex } from "./components/Socials";
 </script>
 
-<div class="bg-zinc-50">
-  <div
-    class="mx-auto max-w-7xl border-x border-zinc-100 bg-white min-h-screen leading-6"
-  >
-    <Navbar />
+<Layout>
+  <main class="mx-auto max-w-5xl px-24 pt-32 pb-24 w-full">
+    <img
+      src="/images/profile.avif"
+      alt="Profile"
+      class="w-16 h-16 rounded-full"
+    />
 
-    <main class="mx-auto max-w-5xl px-4 py-36">
-      <h1
-        class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl max-w-2xl"
-      >
-        Full stack developer with a passion for frontend
-      </h1>
+    <h1
+      class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl max-w-2xl"
+    >
+      Full stack developer with a passion for frontend
+    </h1>
 
-      <p class="text-base text-zinc-800 max-w-2xl mt-6">
-        Hey, my name is Kryštof Krátký and I'm a full stack developer with a
-        passion for frontend. I love to experiment with new technologies and
-        build things that are useful to others.
-      </p>
+    <p class="text-base text-zinc-800 max-w-2xl mt-6">
+      Hey, my name is Kryštof Krátký and I'm a full stack developer with a
+      passion for frontend. I love to experiment with new technologies and build
+      things that are useful to others.
+    </p>
 
-      <!-- Socials -->
-      <SocialsFlex />
+    <SocialsFlex />
 
+    <div class="flex justify-center mt-12">
       <ExperienceSimplified />
+    </div>
 
-      <SocialsList />
-    </main>
-    <Footer />
-  </div>
-</div>
+    <!-- <SocialsList /> -->
+  </main>
+</Layout>
