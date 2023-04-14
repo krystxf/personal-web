@@ -2,7 +2,7 @@
   import { ExperienceSimplified } from "./components/Experience";
   import Footer from "./components/Footer";
   import Navbar from "./components/Navbar";
-  import { experience } from "./data";
+  import { SocialsFlex, SocialsList } from "./components/Socials";
 </script>
 
 <div class="bg-zinc-50">
@@ -25,19 +25,11 @@
       </p>
 
       <!-- Socials -->
-      <section class="mt-6 flex gap-6">
-        <a href="https://www.linkedin.com/in/krystofkratky/">
-          <img src="/icons/github.svg" alt="Github" class="inline w-5 h-5" />
-        </a>
-        <a href="https://github.com/krystxf">
-          <img src="/icons/linkedin.svg" alt="Email" class="inline w-5 h-5" />
-        </a>
-        <a href="mailto:krystof.kratky2003@gmail.com">
-          <img src="/icons/email.svg" alt="LinkedIn" class="inline w-5 h-5" />
-        </a>
-      </section>
+      <SocialsFlex />
 
       <ExperienceSimplified />
+
+      <SocialsList />
     </main>
     <Footer />
   </div>

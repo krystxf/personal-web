@@ -7,11 +7,11 @@
 
   <div class="flex flex-col gap-6 mt-6">
     {#each experience as exp}
-      <div class="flex">
+      <a href={`/experience#${exp["id"] ?? exp.company}`} class="flex">
         <img
           src={exp.logo}
           alt={`${exp.company} logo`}
-          class="h-10 w-10 rounded-lg bg-zinc-100"
+          class="h-11 w-11 p-[2px] rounded-lg border border-zinc-100"
         />
         <div class="flex flex-col ml-4">
           <h5 class="text-base font-medium text-zinc-800">
@@ -23,7 +23,13 @@
         <div class="flex flex-col ml-auto">
           <span class="text-sm text-zinc-800">{exp.from} — {exp.to}</span>
         </div>
-      </div>
+      </a>
     {/each}
+
+    <a
+      href="/experience"
+      class="flex items-center justify-center bg-zinc-50 gap-2 px-3 py-2 text-sm rounded-md outline-offset-2 font-medium text-zinc-900 hover:bg-zinc-100"
+      >Show details</a
+    >
   </div>
 </section>

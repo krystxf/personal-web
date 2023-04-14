@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "optimize": "npx avif --input='./public/**/*.{jpg,jpeg,tif,tiff,webp,png,gif}' --overwrite --verbose --effort=9 --quality=80",
+    "dev": "npm run optimize && vite",
+    "build": "npm run optimize && vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "npm run optimize && svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.3",

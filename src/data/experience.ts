@@ -1,7 +1,8 @@
 const experience = [
   {
     company: "Česká spořitelna",
-    logo: "/images/cs.jpeg",
+    id: "Ceska-sporitelna",
+    logo: "/images/csas.svg",
     position: "Front-end developer",
     from: "2023",
     to: "Present",
@@ -9,7 +10,7 @@ const experience = [
   },
   {
     company: "Decentree",
-    logo: "/images/decentree.jpeg",
+    logo: "/images/decentree.avif",
     position: "Full-stack developer",
     from: "2022",
     to: "2023",
@@ -29,21 +30,21 @@ const experience = [
   },
   {
     company: "eDelta",
-    logo: "/images/delta.jpeg",
+    logo: "/images/delta.avif",
     position: "Front-end developer",
     from: "2021",
     to: "2021",
   },
   {
     company: "Retia",
-    logo: "/images/retia.jpeg",
+    logo: "/images/retia.avif",
     position: "c++ developer",
     from: "2021",
     to: "2021",
   },
   {
     company: "Eldis",
-    logo: "/images/eldis.jpeg",
+    logo: "/images/eldis.avif",
     position: "c++ developer",
     from: "2020",
     to: "2020",
