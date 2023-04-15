@@ -5,7 +5,7 @@
 </script>
 
 <footer
-  class="border-t border-zinc-100 pb-16 pt-10 px-16 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-evenly sm:justify-between"
+  class="border-t border-zinc-100 pb-16 pt-10 px-5 md:px-24 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-evenly sm:justify-between text-sm"
 >
   <ul class="flex justify-evenly gap-6 px-4">
     {#each NAV_LINKS as link}
