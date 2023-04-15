@@ -6,7 +6,7 @@ const parseDuration = (months: number): string => {
   const monthString = remainingMonths > 0 ? `${remainingMonths} mos` : "";
 
   if (years > 0 && remainingMonths > 0) {
-    return `${yearString} · ${monthString}`;
+    return `${yearString} ${monthString}`;
   } else if (years > 0) {
     return yearString;
   } else {

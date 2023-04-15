@@ -7,6 +7,10 @@ export const EXPERIENCE = [
     to: "Present",
     duration: 4,
     technologies: ["React", "TypeScript", "Nx", "Github actions", "Storybook"],
+    description: `
+- web apps for Erste premium banking
+- automated the process of deploying a legacy application using Github actions and shell scripts
+`,
   },
   {
     company: "Decentree",
@@ -28,6 +32,11 @@ export const EXPERIENCE = [
       "Firebase functions",
       "SCSS",
     ],
+    description: `
+Developing modern web applications using mostly Next.js with Chakra UI & GraphQL
+– frontend for registration of documents, orders, clients, etc
+– frontend for NFT marketplace
+`,
   },
   {
     company: "eDelta",
@@ -37,6 +46,10 @@ export const EXPERIENCE = [
     to: new Date(2021, 11),
     duration: 4,
     technologies: ["TypeScript", "Next.js", "SCSS", "GraphQL", "Apollo"],
+    description: `
+– frontend for “highschool comparison web” including administration UI
+- web scraping using Puppeteer
+`,
   },
   {
     company: "Retia",
@@ -46,6 +59,7 @@ export const EXPERIENCE = [
     to: new Date(2021, 8),
     duration: 3,
     technologies: ["C++", "CMake", "Git"],
+    description: `bidirectional translator from proprietary text documents to XML`,
   },
   {
     company: "Eldis",
@@ -55,5 +69,9 @@ export const EXPERIENCE = [
     to: new Date(2020, 7),
     duration: 2,
     technologies: ["C++", "GTK", "KML"],
+    description: `
+– radar range visualization in different altitudes using KML (Google Earth)
+– translation from proprietary documents to KML
+`,
   },
 ];
