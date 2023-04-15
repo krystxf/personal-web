@@ -1,9 +1,13 @@
 <script lang="ts">
   import { NAV_LINKS } from "$data";
+  import Icon from "heroicons-for-svelte";
+  import { Code } from "heroicons-for-svelte/icons/outline";
 </script>
 
-<footer class="border-t border-zinc-100 pb-16 pt-10 px-16 flex justify-between">
-  <ul class="flex gap-6 px-4">
+<footer
+  class="border-t border-zinc-100 pb-16 pt-10 px-16 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-evenly sm:justify-between"
+>
+  <ul class="flex justify-evenly gap-6 px-4">
     {#each NAV_LINKS as link}
       <li class="hover:text-indigo-500">
         <a href={link.path}>{link.label}</a>
@@ -13,6 +17,9 @@
 
   <a
     href="https://github.com/krystxf/personal-web"
-    class="hover:text-indigo-400 text-zinc-400">View source code</a
+    class="hover:text-indigo-400 text-zinc-400 flex gap-2 items-center sm:m-0 m-auto"
   >
+    <Icon icon={Code} />
+    View source code
+  </a>
 </footer>

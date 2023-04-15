@@ -1,5 +1,7 @@
 <script lang="ts">
   import type { Project } from "$data";
+  import Icon from "heroicons-for-svelte";
+  import { Link } from "heroicons-for-svelte/icons/outline";
 
   export let project: Project;
 
@@ -17,7 +19,7 @@
   <img
     src={project.logo}
     alt={`${project.title} logo`}
-    class="h-11 w-11 p-[2px] rounded-lg border border-zinc-100"
+    class="h-11 w-11 p-[2px] rounded-lg border border-zinc-100 bg-white object-fill aspect-square"
   />
 
   <h3 class="mt-2 text-base font-semibold text-zinc-800">
@@ -36,8 +38,9 @@
         <a
           href={link.url}
           target="_blank"
-          class="flex text-sm font-medium text-zinc-400 transition hover:text-indigo-500"
+          class="flex gap-1 items-center text-sm font-medium text-zinc-400 transition hover:text-indigo-500"
         >
+          <Icon icon={Link} />
           {getUrlTitle(link.label, link.url)}
         </a>
       </li>

@@ -2,7 +2,6 @@
 	"name": "personal-web",
 	"version": "0.0.1",
 	"private": true,
-
 	"scripts": {
 		"optimize": "npx avif --input='./static/**/*.{jpg,jpeg,tif,tiff,webp,png,gif}' --overwrite --verbose --effort=9 --quality=80",
 		"prebuild": "npm run optimize",
@@ -24,5 +23,8 @@
 		"typescript": "^5.0.0",
 		"vite": "^4.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"heroicons-for-svelte": "^0.0.10"
+	}
 }

@@ -1,6 +1,8 @@
 <script lang="ts">
   import { EXPERIENCE } from "$data";
   import { parseDuration, parseDate } from "$utils";
+  import Icon from "heroicons-for-svelte";
+  import { ArrowUp } from "heroicons-for-svelte/icons/outline";
 </script>
 
 <section class="p-6 rounded-2xl border border-zinc-100 max-w-xl w-full">
@@ -35,6 +37,7 @@
       class="flex items-center justify-center bg-zinc-50 gap-2 px-3 py-2 text-sm rounded-md outline-offset-2 font-medium text-zinc-900 hover:bg-zinc-100"
     >
       Show details
+      <Icon icon={ArrowUp} class="rotate-45" />
     </a>
   </div>
 </section>
