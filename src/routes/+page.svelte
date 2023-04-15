@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { ExperienceSimplified } from "./components/Experience";
-  import Layout from "./components/Layout/Layout.svelte";
-  import { SocialsFlex } from "./components/Socials";
+  import { ExperienceSimplified } from "../components/Experience";
+  import Layout from "../components/Layout/Layout.svelte";
+  import { SocialsFlex } from "../components/Socials";
 </script>
 
 <Layout>
