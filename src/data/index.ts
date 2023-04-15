@@ -1,1 +1,3 @@
-export { default as experience } from "./experience";
+export * from "./experience";
+export * from "./navLinks";
+export * from "./projects";

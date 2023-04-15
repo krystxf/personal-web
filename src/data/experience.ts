@@ -1,4 +1,4 @@
-const experience = [
+export const EXPERIENCE = [
   {
     company: "Česká spořitelna",
     logo: "/images/csas.svg",
@@ -56,6 +56,4 @@ const experience = [
     duration: 2,
     technologies: ["C++", "GTK", "KML"],
   },
-] as const;
-
-export default experience;
+];

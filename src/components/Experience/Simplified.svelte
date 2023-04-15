@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { experience } from "$data";
+  import { EXPERIENCE } from "$data";
   import { parseDuration, parseDate } from "$utils";
 </script>
 
@@ -7,7 +7,7 @@
   <h4 class="mb-3 flex text-sm font-semibold text-zinc-900">Work experience</h4>
 
   <div class="flex flex-col gap-6 mt-6">
-    {#each experience as exp}
+    {#each EXPERIENCE as exp}
       <a href={`/experience#${exp.company}`} class="flex">
         <img
           src={exp.logo}

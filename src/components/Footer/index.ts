@@ -1,1 +1,1 @@
-export { default } from "./Footer.svelte";
+export * from "./Footer.svelte";

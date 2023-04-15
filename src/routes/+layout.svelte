@@ -12,7 +12,9 @@
     <Navbar />
 
     <!-- main content -->
-    <main class="mx-auto max-w-5xl px-24 pt-32 pb-24 w-full min-h-screen">
+    <main
+      class="mx-auto max-w-5xl px-5 md:px-24 pt-32 pb-24 w-full min-h-screen transition-all ease-in-out duration-150"
+    >
       <slot />
     </main>
 
