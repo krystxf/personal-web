@@ -2,7 +2,10 @@
 	"name": "personal-web",
 	"version": "0.0.1",
 	"private": true,
+
 	"scripts": {
+		"optimize": "npx avif --input='./static/**/*.{jpg,jpeg,tif,tiff,webp,png,gif}' --overwrite --verbose --effort=9 --quality=80",
+		"prebuild": "npm run optimize",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { experience } from "../../data";
-  import { parseDuration, parseDate } from "../../helpers";
+  import { experience } from "$data";
+  import { parseDuration, parseDate } from "$utils";
 </script>
 
 <section class="p-6 rounded-2xl border border-zinc-100 max-w-xl w-full">
@@ -8,7 +8,7 @@
 
   <div class="flex flex-col gap-6 mt-6">
     {#each experience as exp}
-      <a href={`/experience#${exp["id"] ?? exp.company}`} class="flex">
+      <a href={`/experience#${exp.company}`} class="flex">
         <img
           src={exp.logo}
           alt={`${exp.company} logo`}

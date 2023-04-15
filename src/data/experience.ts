@@ -1,7 +1,6 @@
 const experience = [
   {
     company: "Česká spořitelna",
-    id: "Ceska-sporitelna",
     logo: "/images/csas.svg",
     position: "Front-end developer",
     from: "2023",
