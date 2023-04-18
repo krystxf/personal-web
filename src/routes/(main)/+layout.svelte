@@ -5,7 +5,7 @@
   import Navbar from "$components/Navbar/Navbar.svelte";
 </script>
 
-<div class="bg-zinc-50 sm:px-8">
+<div class=" sm:px-8">
   <div
     class="mx-auto max-w-7xl border-x border-zinc-100 bg-white min-h-screen leading-6"
   >
