@@ -1,6 +1,6 @@
 <script lang="ts">
   import { EXPERIENCE } from "$data";
-  import { parseDuration, parseDate } from "$utils";
+  import { parseDate, getDuration } from "$utils";
   import Icon from "heroicons-for-svelte";
   import { ArrowUp } from "heroicons-for-svelte/icons/outline";
 </script>
@@ -27,7 +27,7 @@
           <div class="flex flex-col ml-auto text-right text-sm text-zinc-800">
             <span>{parseDate(exp.from)} — {parseDate(exp.to)}</span>
             <span class="text-zinc-400">
-              {parseDuration(exp.duration)}
+              {getDuration(exp.from, exp.to)}
             </span>
           </div>
         </a>

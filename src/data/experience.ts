@@ -1,12 +1,40 @@
-export const EXPERIENCE = [
+import { getDate } from "$utils/parseDate";
+
+export type ExperienceType = {
+  company: string;
+  logo: string;
+  link?: string;
+  position: string;
+  from: Date;
+  to: Date | "now";
+  technologies: string[];
+  description: string;
+};
+
+const EXPERIENCE: ExperienceType[] = [
+  {
+    company: "Datamole",
+    logo: "/images/datamole.avif",
+    position: "Front-end developer",
+    from: getDate(2023, 7),
+    to: "now",
+    technologies: ["Next.js", "TypeScript", "Chart.js"],
+    description: ``,
+  },
   {
     company: "Česká spořitelna",
     logo: "/images/csas.svg",
     position: "Front-end developer",
-    from: "2023",
-    to: "Present",
-    duration: 4,
-    technologies: ["React", "TypeScript", "Nx", "Github actions", "Storybook"],
+    from: getDate(2023, 1),
+    to: getDate(2023, 7),
+    technologies: [
+      "React",
+      "TypeScript",
+      "Nx",
+      "Chart.js",
+      "Github actions",
+      "Storybook",
+    ],
     description: `
 - web apps for Erste premium banking
 - automated the process of deploying a legacy application using Github actions and shell scripts
@@ -15,10 +43,10 @@ export const EXPERIENCE = [
   {
     company: "Decentree",
     logo: "/images/decentree.avif",
+    link: "https://decentree.com/",
     position: "Full-stack developer",
-    from: "2022",
-    to: "2023",
-    duration: 14,
+    from: getDate(2021, 12),
+    to: getDate(2023, 1),
     technologies: [
       "Next.js",
       "React",
@@ -42,9 +70,8 @@ Developing modern web applications using mostly Next.js with Chakra UI & GraphQL
     company: "eDelta",
     logo: "/images/delta.avif",
     position: "Front-end developer",
-    from: new Date(2021, 6),
-    to: new Date(2021, 11),
-    duration: 4,
+    from: getDate(2021, 6),
+    to: getDate(2021, 10),
     technologies: ["TypeScript", "Next.js", "SCSS", "GraphQL", "Apollo"],
     description: `
 – frontend for “highschool comparison web” including administration UI
@@ -55,9 +82,8 @@ Developing modern web applications using mostly Next.js with Chakra UI & GraphQL
     company: "Retia",
     logo: "/images/retia.avif",
     position: "C++ developer",
-    from: new Date(2021, 5),
-    to: new Date(2021, 8),
-    duration: 3,
+    from: getDate(2021, 6),
+    to: getDate(2021, 8),
     technologies: ["C++", "CMake", "Git"],
     description: `bidirectional translator from proprietary text documents to XML`,
   },
@@ -65,9 +91,8 @@ Developing modern web applications using mostly Next.js with Chakra UI & GraphQL
     company: "Eldis",
     logo: "/images/eldis.avif",
     position: "C++ developer",
-    from: new Date(2020, 6),
-    to: new Date(2020, 7),
-    duration: 2,
+    to: getDate(2020, 8),
+    from: getDate(2020, 6),
     technologies: ["C++", "GTK", "KML"],
     description: `
 – radar range visualization in different altitudes using KML (Google Earth)
@@ -75,3 +100,23 @@ Developing modern web applications using mostly Next.js with Chakra UI & GraphQL
 `,
   },
 ];
+
+const POLISHED_EXPERIENCE = EXPERIENCE.filter(
+  (experience) => experience.from.getTime() < new Date().getTime()
+)
+  .sort((a, b) => {
+    if (a.to === "now" && b.to !== "now") return -1;
+    if (a.to !== "now" && b.to === "now") return 1;
+    return b.from.getTime() - a.from.getTime();
+  })
+  .map((experience) => {
+    if (experience.to === "now") return experience;
+    if (experience.to.getTime() > new Date().getTime())
+      return {
+        ...experience,
+        to: "now",
+      };
+    return experience;
+  }) as ExperienceType[];
+
+export { POLISHED_EXPERIENCE as EXPERIENCE };

@@ -3,6 +3,10 @@
   import { PROJECTS, CONTRIBUTIONS } from "$data";
 </script>
 
+<svelte:head>
+  <title>Projects | Kryštof Krátký</title>
+</svelte:head>
+
 <h2 class="mt-6 text-4xl font-bold tracking-tight text-zinc-800">
   Projects I've worked on recently
 </h2>
